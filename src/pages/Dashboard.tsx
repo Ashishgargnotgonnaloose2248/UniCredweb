@@ -44,7 +44,7 @@ const Dashboard = () => {
               <div className="text-white/90">Credits Earned</div>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+            <Card className="p-8 border-0 shadow-lg bg-slate-50/70 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-4">
                 <Award className="w-8 h-8 text-electric-500" />
                 <Badge className="bg-electric-100 text-electric-600 border-electric-200">
