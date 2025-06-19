@@ -71,7 +71,7 @@ const Dashboard = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Recent Activities */}
             <div className="lg:col-span-2">
-              <Card className="p-8 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+              <Card className="p-8 border-0 shadow-lg bg-slate-50/60 backdrop-blur-sm">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-gray-800">
                     Recent Activities
