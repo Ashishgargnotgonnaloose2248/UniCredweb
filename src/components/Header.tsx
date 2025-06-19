@@ -34,16 +34,30 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center space-x-2 text-gray-700 hover:text-unicred-500 transition-colors font-medium"
-              >
-                <item.icon className="w-4 h-4" />
-                <span>{item.name}</span>
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith("#") ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center space-x-2 text-gray-700 hover:text-unicred-500 transition-colors font-medium"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "flex items-center space-x-2 text-gray-700 hover:text-unicred-500 transition-colors font-medium",
+                    location.pathname === item.href && "text-unicred-500",
+                  )}
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                </Link>
+              ),
+            )}
           </nav>
 
           {/* CTA Buttons */}
