@@ -197,7 +197,7 @@ const Dashboard = () => {
               </Card>
 
               {/* Upcoming Events */}
-              <Card className="p-6 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+              <Card className="p-6 border-0 shadow-lg bg-blue-50/50 backdrop-blur-sm">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
                   Upcoming Events
                 </h3>
