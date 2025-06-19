@@ -367,7 +367,7 @@ const Index = () => {
       </section>
 
       {/* Rewards Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
