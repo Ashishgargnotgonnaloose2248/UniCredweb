@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap, Award, Gift, User } from "lucide-react";
+import { Menu, X, Zap, Award, Gift, User, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
