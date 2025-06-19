@@ -434,27 +434,29 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/60 backdrop-blur-sm"
+                className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/60 dark:bg-gray-800/40 backdrop-blur-sm dark:border-gray-700/20 dark:shadow-black/10"
               >
                 <div className="flex items-center mb-6">
                   <div className="text-3xl mr-4">{testimonial.avatar}</div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">
+                    <h3 className="font-semibold text-gray-800 dark:text-gray-200">
                       {testimonial.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 <div className="flex items-center justify-between">
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-yellow-400 dark:text-yellow-500">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <Badge className="bg-unicred-100 text-unicred-600 border-unicred-200">
+                  <Badge className="bg-unicred-100 dark:bg-unicred-900/30 text-unicred-600 dark:text-unicred-400 border-unicred-200 dark:border-unicred-800">
                     {testimonial.credits} credits earned
                   </Badge>
                 </div>
