@@ -63,9 +63,10 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Button
               variant="ghost"
-              className="text-gray-700 hover:text-unicred-500"
+              className="text-gray-700 hover:text-unicred-500 dark:text-gray-300 dark:hover:text-unicred-400"
             >
               Sign In
             </Button>
