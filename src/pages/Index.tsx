@@ -180,7 +180,9 @@ const Index = () => {
                 <span className="block bg-gradient-to-r from-electric-500 via-neon-500 to-unicred-500 bg-clip-text text-transparent">
                   Get Rewards.
                 </span>
-                <span className="block text-gray-800">Level Up Life.</span>
+                <span className="block text-gray-800 dark:text-gray-200">
+                  Level Up Life.
+                </span>
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
