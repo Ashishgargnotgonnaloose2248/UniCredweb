@@ -319,7 +319,7 @@ const Index = () => {
 
           {/* Activity Tabs */}
           <div className="flex justify-center mb-12">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg">
+            <div className="bg-white/80 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-2 shadow-lg dark:shadow-black/20">
               {Object.keys(activities).map((tab) => (
                 <button
                   key={tab}
@@ -327,7 +327,7 @@ const Index = () => {
                   className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 capitalize ${
                     activeTab === tab
                       ? "bg-unicred-gradient text-white shadow-lg"
-                      : "text-gray-600 hover:text-unicred-500"
+                      : "text-gray-600 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400"
                   }`}
                 >
                   {tab}
