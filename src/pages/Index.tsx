@@ -483,20 +483,13 @@ const Index = () => {
                 <Zap className="w-5 h-5 mr-2" />
                 Get Started Now
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white/20 hover:backdrop-blur-sm px-8 py-4 text-lg font-semibold"
-              >
-                Learn More
-              </Button>
             </div>
 
             {/* Mobile App Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
-              <span className="text-white/90 text-sm font-medium">
-                Download the app:
-              </span>
+            <span className="text-white/90 text-sm font-medium">
+              Download the app:
+            </span>
+            <div className="flex gap-4 items-center">
               <div className="flex gap-3">
                 <Button
                   size="sm"
