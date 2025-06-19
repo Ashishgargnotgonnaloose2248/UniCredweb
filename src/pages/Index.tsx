@@ -389,16 +389,16 @@ const Index = () => {
             {rewards.map((reward, index) => (
               <Card
                 key={index}
-                className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 backdrop-blur-sm hover:scale-105 group cursor-pointer overflow-hidden relative"
+                className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 dark:bg-gray-800/40 backdrop-blur-sm hover:scale-105 group cursor-pointer overflow-hidden relative dark:border-gray-700/20 dark:shadow-black/10"
               >
                 <div
-                  className={`absolute top-0 left-0 w-full h-32 bg-gradient-to-br ${reward.color} opacity-20`}
+                  className={`absolute top-0 left-0 w-full h-32 bg-gradient-to-br ${reward.color} opacity-20 dark:opacity-30`}
                 ></div>
                 <div className="relative z-10">
                   <div className="text-4xl mb-4 text-center">
                     {reward.image}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2 text-center">
                     {reward.title}
                   </h3>
                   <div className="text-center mb-4">
@@ -408,7 +408,7 @@ const Index = () => {
                       {reward.discount}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center space-x-2 text-gray-600">
+                  <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-400">
                     <Zap className="w-4 h-4" />
                     <span>{reward.credits} credits</span>
                   </div>
