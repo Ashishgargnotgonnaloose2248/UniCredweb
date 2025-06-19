@@ -6,8 +6,10 @@ import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
+    { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
     { name: "Earn Credits", href: "#earn", icon: Zap },
     { name: "Rewards", href: "#rewards", icon: Gift },
     { name: "Leaderboard", href: "#leaderboard", icon: Award },
