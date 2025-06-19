@@ -340,7 +340,7 @@ const Index = () => {
               (activity, index) => (
                 <Card
                   key={index}
-                  className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm hover:scale-105 group cursor-pointer"
+                  className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 backdrop-blur-sm hover:scale-105 group cursor-pointer"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-unicred-100 to-electric-100 rounded-xl flex items-center justify-center group-hover:from-unicred-500 group-hover:to-electric-500 transition-all duration-300">
