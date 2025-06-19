@@ -311,7 +311,7 @@ const Index = () => {
                 Earn Credits For Everything
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               From academic achievements to social activities, every
               participation counts!
             </p>
