@@ -81,7 +81,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-unicred-500 transition-colors"
+            className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400 transition-colors"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
