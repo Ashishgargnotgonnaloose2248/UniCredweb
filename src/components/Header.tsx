@@ -115,8 +115,9 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "flex items-center space-x-3 text-gray-700 hover:text-unicred-500 transition-colors font-medium py-2",
-                    location.pathname === item.href && "text-unicred-500",
+                    "flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400 transition-colors font-medium py-2",
+                    location.pathname === item.href &&
+                      "text-unicred-500 dark:text-unicred-400",
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
