@@ -126,10 +126,11 @@ const Header = () => {
                 </Link>
               ),
             )}
-            <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <ThemeToggle />
               <Button
                 variant="ghost"
-                className="justify-start text-gray-700 hover:text-unicred-500"
+                className="justify-start text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400"
               >
                 <User className="w-4 h-4 mr-2" />
                 Sign In
