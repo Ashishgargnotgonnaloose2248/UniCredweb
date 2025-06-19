@@ -342,21 +342,23 @@ const Index = () => {
               (activity, index) => (
                 <Card
                   key={index}
-                  className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 backdrop-blur-sm hover:scale-105 group cursor-pointer"
+                  className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 dark:bg-gray-800/40 backdrop-blur-sm hover:scale-105 group cursor-pointer dark:border-gray-700/20 dark:shadow-black/10"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-unicred-100 to-electric-100 rounded-xl flex items-center justify-center group-hover:from-unicred-500 group-hover:to-electric-500 transition-all duration-300">
-                      <activity.icon className="w-6 h-6 text-unicred-500 group-hover:text-white transition-colors duration-300" />
+                    <div className="w-12 h-12 bg-gradient-to-r from-unicred-100 to-electric-100 dark:from-unicred-900/30 dark:to-electric-900/30 rounded-xl flex items-center justify-center group-hover:from-unicred-500 group-hover:to-electric-500 transition-all duration-300 dark:border dark:border-unicred-800/20">
+                      <activity.icon className="w-6 h-6 text-unicred-500 dark:text-unicred-400 group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <Badge className="bg-neon-100 text-neon-600 border-neon-200">
+                    <Badge className="bg-neon-100 dark:bg-neon-900/30 text-neon-600 dark:text-neon-400 border-neon-200 dark:border-neon-800">
                       {activity.category}
                     </Badge>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
                     {activity.name}
                   </h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Credits</span>
+                    <span className="text-gray-600 dark:text-gray-400">
+                      Credits
+                    </span>
                     <span className="text-2xl font-bold bg-gradient-to-r from-unicred-500 to-electric-500 bg-clip-text text-transparent">
                       {activity.credits}
                     </span>
