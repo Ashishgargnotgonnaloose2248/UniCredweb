@@ -277,11 +277,11 @@ const Index = () => {
             ].map((item, index) => (
               <Card
                 key={index}
-                className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/80 backdrop-blur-sm relative overflow-hidden group"
+                className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/80 dark:bg-gray-800/40 backdrop-blur-sm relative overflow-hidden group dark:border-gray-700/20 dark:shadow-xl dark:shadow-black/10"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-unicred-500 via-electric-500 to-neon-500"></div>
                 <div className="relative z-10">
-                  <div className="text-6xl font-bold text-gray-100 mb-4 group-hover:text-gray-50 transition-colors">
+                  <div className="text-6xl font-bold text-gray-100 dark:text-gray-800 mb-4 group-hover:text-gray-50 dark:group-hover:text-gray-700 transition-colors">
                     {item.step}
                   </div>
                   <div
@@ -289,10 +289,10 @@ const Index = () => {
                   >
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4 mt-8">
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 mt-8">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
