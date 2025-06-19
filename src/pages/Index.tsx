@@ -385,7 +385,7 @@ const Index = () => {
             {rewards.map((reward, index) => (
               <Card
                 key={index}
-                className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm hover:scale-105 group cursor-pointer overflow-hidden relative"
+                className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 backdrop-blur-sm hover:scale-105 group cursor-pointer overflow-hidden relative"
               >
                 <div
                   className={`absolute top-0 left-0 w-full h-32 bg-gradient-to-br ${reward.color} opacity-20`}
