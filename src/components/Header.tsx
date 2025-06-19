@@ -68,9 +68,11 @@ const Header = () => {
             >
               Sign In
             </Button>
-            <Button className="bg-unicred-gradient hover:shadow-lg hover:shadow-unicred-500/25 text-white border-0 transition-all duration-300">
-              Get Started
-            </Button>
+            <Link to="/dashboard">
+              <Button className="bg-unicred-gradient hover:shadow-lg hover:shadow-unicred-500/25 text-white border-0 transition-all duration-300">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
