@@ -430,7 +430,7 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm"
+                className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/60 backdrop-blur-sm"
               >
                 <div className="flex items-center mb-6">
                   <div className="text-3xl mr-4">{testimonial.avatar}</div>
