@@ -110,7 +110,7 @@ const Dashboard = () => {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-4 bg-gray-50 rounded-xl"
+                      className="flex items-center justify-between p-4 bg-slate-50/60 rounded-xl"
                     >
                       <div className="flex items-center space-x-4">
                         <div className="w-12 h-12 bg-unicred-gradient rounded-xl flex items-center justify-center">
