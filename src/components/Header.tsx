@@ -94,17 +94,32 @@ const Header = () => {
           )}
         >
           <div className="py-4 space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center space-x-3 text-gray-700 hover:text-unicred-500 transition-colors font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <item.icon className="w-5 h-5" />
-                <span>{item.name}</span>
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith("#") ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center space-x-3 text-gray-700 hover:text-unicred-500 transition-colors font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span>{item.name}</span>
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "flex items-center space-x-3 text-gray-700 hover:text-unicred-500 transition-colors font-medium py-2",
+                    location.pathname === item.href && "text-unicred-500",
+                  )}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span>{item.name}</span>
+                </Link>
+              ),
+            )}
             <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
               <Button
                 variant="ghost"
