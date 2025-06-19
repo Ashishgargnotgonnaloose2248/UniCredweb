@@ -40,7 +40,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-unicred-500 transition-colors font-medium"
+                  className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400 transition-colors font-medium"
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
