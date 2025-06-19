@@ -140,7 +140,7 @@ const Dashboard = () => {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Available Rewards */}
-              <Card className="p-6 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+              <Card className="p-6 border-0 shadow-lg bg-slate-50/60 backdrop-blur-sm">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
                   Available Rewards
                 </h3>
