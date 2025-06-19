@@ -14,7 +14,7 @@ import {
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/60 to-violet-50/60">
       <Header />
 
       <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
