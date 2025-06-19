@@ -242,7 +242,7 @@ const Index = () => {
                 How UniCred Works
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Three simple steps to turn your campus activities into amazing
               rewards
             </p>
