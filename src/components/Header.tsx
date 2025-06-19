@@ -50,8 +50,9 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "flex items-center space-x-2 text-gray-700 hover:text-unicred-500 transition-colors font-medium",
-                    location.pathname === item.href && "text-unicred-500",
+                    "flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400 transition-colors font-medium",
+                    location.pathname === item.href &&
+                      "text-unicred-500 dark:text-unicred-400",
                   )}
                 >
                   <item.icon className="w-4 h-4" />
