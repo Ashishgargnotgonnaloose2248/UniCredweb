@@ -214,15 +214,15 @@ const Index = () => {
                 {stats.map((stat, index) => (
                   <div key={stat.label} className="text-center">
                     <div className="relative mb-4">
-                      <div className="w-16 h-16 mx-auto bg-gradient-to-r from-unicred-100 to-electric-100 rounded-2xl flex items-center justify-center">
-                        <stat.icon className="w-8 h-8 text-unicred-500" />
+                      <div className="w-16 h-16 mx-auto bg-gradient-to-r from-unicred-100 to-electric-100 dark:from-unicred-900/30 dark:to-electric-900/30 rounded-2xl flex items-center justify-center border dark:border-unicred-800/20">
+                        <stat.icon className="w-8 h-8 text-unicred-500 dark:text-unicred-400" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-neon-400 rounded-full animate-ping opacity-75"></div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-neon-400 dark:bg-neon-500 rounded-full animate-ping opacity-75"></div>
                     </div>
-                    <div className="text-3xl font-bold text-gray-800 mb-1">
+                    <div className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-gray-600 font-medium">
+                    <div className="text-gray-600 dark:text-gray-400 font-medium">
                       {stat.label}
                     </div>
                   </div>
