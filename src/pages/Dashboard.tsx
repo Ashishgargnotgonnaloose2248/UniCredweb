@@ -55,7 +55,7 @@ const Dashboard = () => {
               <div className="text-gray-600">Rewards Claimed</div>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+            <Card className="p-8 border-0 shadow-lg bg-slate-50/70 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-4">
                 <TrendingUp className="w-8 h-8 text-neon-500" />
                 <Badge className="bg-neon-100 text-neon-600 border-neon-200">
