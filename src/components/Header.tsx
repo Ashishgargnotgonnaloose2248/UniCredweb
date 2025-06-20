@@ -18,13 +18,23 @@ import { cn } from "@/lib/utils";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { isAuthenticated, user, logout } = useAuth();
 
-  const navItems = [
+  // Different navigation items based on auth status
+  const authenticatedNavItems = [
     { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
     { name: "Earn Credits", href: "#earn", icon: Zap },
     { name: "Rewards", href: "#rewards", icon: Gift },
     { name: "Leaderboard", href: "#leaderboard", icon: Award },
   ];
+
+  const publicNavItems = [
+    { name: "Features", href: "#features", icon: Zap },
+    { name: "How It Works", href: "#how-it-works", icon: Award },
+    { name: "About", href: "#about", icon: Gift },
+  ];
+
+  const navItems = isAuthenticated ? authenticatedNavItems : publicNavItems;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200/30 dark:border-gray-700/30">
