@@ -85,19 +85,37 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Link to="/login">
-              <Button
-                variant="ghost"
-                className="text-gray-700 hover:text-unicred-500 dark:text-gray-300 dark:hover:text-unicred-400"
-              >
-                Sign In
-              </Button>
-            </Link>
-            <Link to="/dashboard">
-              <Button className="bg-unicred-gradient hover:shadow-lg hover:shadow-unicred-500/25 text-white border-0 transition-all duration-300">
-                Get Started
-              </Button>
-            </Link>
+            {isAuthenticated ? (
+              <>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">
+                  Hi, {user?.firstName}!
+                </span>
+                <Button
+                  variant="ghost"
+                  onClick={logout}
+                  className="text-gray-700 hover:text-red-500 dark:text-gray-300 dark:hover:text-red-400"
+                >
+                  <LogOut className="w-4 h-4 mr-2" />
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <Button
+                    variant="ghost"
+                    className="text-gray-700 hover:text-unicred-500 dark:text-gray-300 dark:hover:text-unicred-400"
+                  >
+                    Sign In
+                  </Button>
+                </Link>
+                <Link to="/signup">
+                  <Button className="bg-unicred-gradient hover:shadow-lg hover:shadow-unicred-500/25 text-white border-0 transition-all duration-300">
+                    Get Started
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
