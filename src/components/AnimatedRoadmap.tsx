@@ -49,7 +49,7 @@ const AnimatedRoadmap = ({ isOpen, onClose }: RoadmapModalProps) => {
   useEffect(() => {
     if (isOpen) {
       setCurrentStep(0);
-      setCarPosition(0);
+      setCarPosition(0); // Start at 0% (first step)
     }
   }, [isOpen]);
 
