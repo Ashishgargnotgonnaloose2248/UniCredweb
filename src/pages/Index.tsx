@@ -156,7 +156,13 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/60 to-violet-50/60 dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900/60">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/30 via-indigo-50/40 to-purple-50/30 dark:from-slate-900 dark:via-blue-900/20 dark:to-indigo-900/20 relative overflow-hidden">
+      {/* Background Animations */}
+      <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-purple-200/20 dark:from-blue-800/10 dark:to-purple-800/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-indigo-200/25 to-cyan-200/25 dark:from-indigo-800/15 dark:to-cyan-800/15 rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }}></div>
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-200/15 to-pink-200/15 dark:from-purple-800/10 dark:to-pink-800/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "1.5s" }}></div>
+
+      <div className="relative z-10">
       <Header />
 
       {/* Hero Section */}
@@ -182,9 +188,7 @@ const Index = () => {
                 <span className="block bg-gradient-to-r from-electric-500 via-neon-500 to-unicred-500 bg-clip-text text-transparent">
                   Get Rewards.
                 </span>
-                <span className="block text-gray-800 dark:text-gray-200">
-                  Level Up Life.
-                </span>
+                <span className="block text-gray-800 dark:text-gray-200">Level Up Life.</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -343,7 +347,7 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {activities[activeTab as keyof typeof activities].map(
               (activity, index) => (
-                <Card
+                  <Card
                   key={index}
                   className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/70 dark:bg-gray-800/40 backdrop-blur-sm hover:scale-105 group cursor-pointer dark:border-gray-700/20 dark:shadow-black/10"
                 >
@@ -359,9 +363,7 @@ const Index = () => {
                     {activity.name}
                   </h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-600 dark:text-gray-400">
-                      Credits
-                    </span>
+                    <span className="text-gray-600 dark:text-gray-400">Credits</span>
                     <span className="text-2xl font-bold bg-gradient-to-r from-unicred-500 to-electric-500 bg-clip-text text-transparent">
                       {activity.credits}
                     </span>
@@ -445,9 +447,7 @@ const Index = () => {
                     <h3 className="font-semibold text-gray-800 dark:text-gray-200">
                       {testimonial.name}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      {testimonial.role}
-                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
@@ -495,21 +495,15 @@ const Index = () => {
             </div>
 
             {/* Mobile App Download Buttons */}
-            <span className="text-white/90 text-sm font-medium">
-              Download the app:
-            </span>
+            <span className="text-white/90 text-sm font-medium">Download the app:</span>
             <div className="flex gap-4 items-center">
               <div className="flex gap-3">
                 <Button
                   size="sm"
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-6 py-2 transition-all duration-300 backdrop-blur-sm"
                 >
-                  <svg
-                    className="w-5 h-5 mr-2"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                  <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
                   </svg>
                   iOS
                 </Button>
@@ -517,12 +511,8 @@ const Index = () => {
                   size="sm"
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-6 py-2 transition-all duration-300 backdrop-blur-sm"
                 >
-                  <svg
-                    className="w-5 h-5 mr-2"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.699 12l1.999-2.491zM5.864 2.658L16.802 8.99l-2.303 2.302-8.635-8.634z" />
+                  <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.699 12l1.999-2.491zM5.864 2.658L16.802 8.99l-2.303 2.302-8.635-8.634z"/>
                   </svg>
                   Android
                 </Button>
