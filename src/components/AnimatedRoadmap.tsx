@@ -142,12 +142,28 @@ const AnimatedRoadmap = ({ isOpen, onClose }: RoadmapModalProps) => {
 
               {/* Car */}
               <div
-                className="absolute -top-6 transition-all duration-1000 ease-out"
+                className="absolute -top-6 transition-all duration-1000 ease-out transform -translate-x-1/2"
                 style={{ left: `${carPosition}%` }}
               >
                 <div className="relative">
-                  <div className="text-4xl animate-bounce">🚗</div>
+                  <div className="text-4xl animate-bounce">🏎️</div>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
+                  {/* Speed lines when moving */}
+                  {currentStep > 0 && (
+                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-8">
+                      <div className="flex space-x-1 opacity-60">
+                        <div className="w-3 h-0.5 bg-blue-400 animate-pulse"></div>
+                        <div
+                          className="w-2 h-0.5 bg-blue-300 animate-pulse"
+                          style={{ animationDelay: "0.1s" }}
+                        ></div>
+                        <div
+                          className="w-1 h-0.5 bg-blue-200 animate-pulse"
+                          style={{ animationDelay: "0.2s" }}
+                        ></div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
