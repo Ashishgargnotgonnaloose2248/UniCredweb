@@ -168,19 +168,39 @@ const Header = () => {
             )}
             <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
               <ThemeToggle />
-              <Link to="/login">
-                <Button
-                  variant="ghost"
-                  className="justify-start text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400"
-                >
-                  <User className="w-4 h-4 mr-2" />
-                  Sign In
-                </Button>
-              </Link>
-              <Button className="justify-start bg-unicred-gradient hover:shadow-lg hover:shadow-unicred-500/25 text-white border-0">
-                <Zap className="w-4 h-4 mr-2" />
-                Get Started
-              </Button>
+              {isAuthenticated ? (
+                <>
+                  <div className="text-gray-700 dark:text-gray-300 font-medium px-3 py-2">
+                    Hi, {user?.firstName}!
+                  </div>
+                  <Button
+                    variant="ghost"
+                    onClick={logout}
+                    className="justify-start text-gray-700 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-400"
+                  >
+                    <LogOut className="w-4 h-4 mr-2" />
+                    Logout
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Link to="/login">
+                    <Button
+                      variant="ghost"
+                      className="justify-start text-gray-700 dark:text-gray-300 hover:text-unicred-500 dark:hover:text-unicred-400"
+                    >
+                      <User className="w-4 h-4 mr-2" />
+                      Sign In
+                    </Button>
+                  </Link>
+                  <Link to="/signup">
+                    <Button className="justify-start bg-unicred-gradient hover:shadow-lg hover:shadow-unicred-500/25 text-white border-0">
+                      <Zap className="w-4 h-4 mr-2" />
+                      Get Started
+                    </Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
