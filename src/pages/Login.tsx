@@ -130,7 +130,24 @@ const Login = () => {
               </div>
 
               <Card className="p-8 border-0 shadow-xl bg-slate-50/80 dark:bg-gray-800/40 backdrop-blur-sm dark:border-gray-700/20 dark:shadow-black/20">
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Success Message */}
+                  {successMessage && (
+                    <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                      <p className="text-green-700 dark:text-green-400 text-sm">
+                        {successMessage}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Error Message */}
+                  {error && (
+                    <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                      <p className="text-red-700 dark:text-red-400 text-sm">
+                        {error}
+                      </p>
+                    </div>
+                  )}
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <Label
