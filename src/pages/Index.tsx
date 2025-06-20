@@ -292,7 +292,7 @@ const Index = () => {
               ].map((item, index) => (
                 <Card
                   key={index}
-                  className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-slate-50/80 dark:bg-gray-800/40 backdrop-blur-sm relative overflow-hidden group dark:border-gray-700/20 dark:shadow-xl dark:shadow-black/10"
+                  className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-gray-800/40 backdrop-blur-sm relative overflow-hidden group dark:border-gray-700/20 dark:shadow-xl dark:shadow-black/10"
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-unicred-500 via-electric-500 to-neon-500"></div>
                   <div className="relative z-10">
