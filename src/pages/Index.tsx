@@ -25,6 +25,7 @@ import {
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("events");
+  const [isRoadmapOpen, setIsRoadmapOpen] = useState(false);
 
   const stats = [
     { label: "Active Students", value: "10K+", icon: Users },
