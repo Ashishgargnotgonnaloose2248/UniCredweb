@@ -55,15 +55,19 @@ const AnimatedRoadmap = ({ isOpen, onClose }: RoadmapModalProps) => {
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
-      setCarPosition(carPosition + 33.33);
+      const newStep = currentStep + 1;
+      setCurrentStep(newStep);
+      // Calculate position to align car with step markers (0%, 50%, 100%)
+      setCarPosition((newStep / (steps.length - 1)) * 100);
     }
   };
 
   const prevStep = () => {
     if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-      setCarPosition(carPosition - 33.33);
+      const newStep = currentStep - 1;
+      setCurrentStep(newStep);
+      // Calculate position to align car with step markers (0%, 50%, 100%)
+      setCarPosition((newStep / (steps.length - 1)) * 100);
     }
   };
 
