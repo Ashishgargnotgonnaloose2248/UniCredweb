@@ -155,7 +155,9 @@ const AnimatedRoadmap = ({ isOpen, onClose }: RoadmapModalProps) => {
                 style={{ left: `${carPosition}%` }}
               >
                 <div className="relative">
-                  <div className="text-4xl animate-bounce">🏎️</div>
+                  <div className="text-4xl animate-bounce transform scale-x-[-1]">
+                    🏎️
+                  </div>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
                   {/* Speed lines when moving */}
                   {currentStep > 0 && (
