@@ -205,7 +205,8 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-unicred-200 text-unicred-600 hover:bg-unicred-50 px-8 py-4 text-lg font-semibold"
+                  onClick={() => setIsRoadmapOpen(true)}
+                  className="border-2 border-unicred-200 dark:border-unicred-700 text-unicred-600 dark:text-unicred-400 hover:bg-unicred-50 dark:hover:bg-unicred-900/20 hover:text-unicred-700 dark:hover:text-unicred-300 px-8 py-4 text-lg font-semibold transition-all duration-300"
                 >
                   See How It Works
                 </Button>
